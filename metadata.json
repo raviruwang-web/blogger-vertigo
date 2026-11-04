@@ -1,0 +1,6 @@
+{
+  "name": "Vertigo POV — Modern Blog Preview",
+  "description": "Expedition-journal preview demo for Vertigo POV featuring the comprehensive Dolomites travel guide, aviation aesthetic, topographic visuals, interactive timeline, and route maps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

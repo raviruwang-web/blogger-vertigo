@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Archivo", sans-serif;
+  
+  --color-paper: #F5F0E8;
+  --color-ink: #1A1A1A;
+  --color-graphite: #6B6B6B;
+  --color-rec: #e62117;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #F5F0E8;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6B6B6B;
+    --rec-accent: #e62117;
+    --border-hairline: #1A1A1A;
+  }
+
+  body {
+    background-color: #F5F0E8;
+    color: #1A1A1A;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Hairline borders */
+.hairline-b {
+  border-bottom: 1px solid currentColor;
+}
+.hairline-t {
+  border-top: 1px solid currentColor;
+}
+.hairline-l {
+  border-left: 1px solid currentColor;
+}
+.hairline-r {
+  border-right: 1px solid currentColor;
+}
+.hairline-all {
+  border: 1px solid currentColor;
+}
+
+/* REC pulsing dot */
+@keyframes rec-dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.9); }
+}
+
+.rec-pulse {
+  animation: rec-dot-pulse 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rec-pulse {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Measure for optimal readability: 60-75 characters */
+.prose-editorial {
+  max-width: 68ch;
+  line-height: 1.75;
+}
+
+/* Sharp tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Pull quote: large red italic Inter */
+.quote-editorial {
+  font-family: var(--font-sans);
+  font-style: italic;
+  color: #e62117;
+}
+
+/* Clean minimal scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #6B6B6B;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e62117;
+}
